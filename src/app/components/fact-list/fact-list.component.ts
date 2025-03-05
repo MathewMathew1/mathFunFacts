@@ -74,7 +74,7 @@ export class FactListComponent {
     }
 
     const apiUrl =
-      `http://numbersapi.com/${newNumbers.join(',')}` + '/' + this.category;
+      `https://numbersapi.com/${newNumbers.join(',')}` + '/' + this.category;
 
     this.factService.getMultipleFacts(apiUrl, this.category).subscribe(
       (data: any) => {

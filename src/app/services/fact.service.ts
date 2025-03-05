@@ -9,19 +9,19 @@ import { FactType } from '../../types/Facts';
 export class FactService {
   private baseUrl = 'http://numbersapi.com/';
 
-  constructor(private http: HttpClient) {}
+  constructor(private https: HttpClient) {}
 
   getRandomFact(type: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}random/${type}?json`);
+    return this.https.get(`${this.baseUrl}random/${type}?json`);
   }
 
   getFactByNumber(number: string, type: FactType): Observable<any> {
-    const fact = this.http.get(`${this.baseUrl}${number}/${type}?json`)
+    const fact = this.https.get(`${this.baseUrl}${number}/${type}?json`)
     console.log(fact)
     return fact;
   }
 
   getMultipleFacts(apiUrl: string, type: string): Observable<any> {
-    return this.http.get(apiUrl); 
+    return this.https.get(apiUrl); 
   }
 }

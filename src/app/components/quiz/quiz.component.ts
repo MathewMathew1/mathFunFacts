@@ -35,13 +35,10 @@ export class QuizComponent implements OnInit {
     this.isLoading = true;
     const randomCategory: FactType = this.getRandomCategory();
 
-    console.log('here');
     this.factService.getRandomFact(randomCategory).subscribe(
       (data: Fact) => {
-        console.log(data);
         const modifiedFact = this.modifyFact(data);
-        console.log(modifiedFact);
-
+    
         const isInFavorite = this.favoritesService.isFavorite(modifiedFact);
         this.currentFact = { ...modifiedFact, isInFavorite };
         this.currentTrueFact = { ...data, isInFavorite };
