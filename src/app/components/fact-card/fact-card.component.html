@@ -1,0 +1,13 @@
+<div class="fact-card glass">
+    <h3>{{ fact.type | titlecase }} Fact</h3>
+    <div class="card-text">  <p>{{ fact.text }}</p> </div>
+    <div>
+    <app-button color="green" *ngIf="!fact.isInFavorite && showButton" (click)="addToFavorites()">
+      Add to Favorites
+    </app-button>
+    
+    <app-button color="red" *ngIf="fact.isInFavorite && showButton" (click)="removeFromFavorites()">
+      Remove from Favorites
+    </app-button>
+  </div>
+  </div>

@@ -1,0 +1,45 @@
+<div class="glass component-container">
+  <div class="fact-search-container">
+    <div class="input-info-container">
+      <h3>Select Fact Type:</h3>
+      <div class="input-container">
+        <input
+          *ngIf="selectedType === 'trivia' || selectedType === 'math'"
+          type="number"
+          [(ngModel)]="inputValue"
+          placeholder="Enter a number"
+        />
+
+        <input
+          *ngIf="selectedType === 'date'"
+          type="text"
+          [(ngModel)]="inputValue"
+          placeholder="Enter date (MM/DD)"
+        />
+
+        <input
+          *ngIf="selectedType === 'year'"
+          type="number"
+          [(ngModel)]="inputValue"
+          placeholder="Enter a year"
+        />
+
+        <app-button color="blue" (click)="getFact()">Get Fact</app-button>
+      </div>
+    </div>
+    <div class="fact-type-list">
+      <div
+        *ngFor="let type of factTypes"
+        (click)="selectType(type)"
+        [class.selected]="type === selectedType"
+        class="fact-type-item"
+      >
+        {{ type | titlecase }}
+      </div>
+    </div>
+  </div>
+  <div class="fact-container" *ngIf="fact">
+    <h2>Fact:</h2>
+    <app-fact-card [fact]="fact"></app-fact-card>
+  </div>
+</div>

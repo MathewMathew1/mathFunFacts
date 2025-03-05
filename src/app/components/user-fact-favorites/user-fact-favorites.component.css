@@ -1,0 +1,13 @@
+.favorite-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem
+}
+
+.no-facts-container{
+    font-size: 22px;
+    padding: 2rem;
+    text-align: center;
+    color: aliceblue;
+}

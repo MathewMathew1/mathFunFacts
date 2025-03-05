@@ -1,0 +1,80 @@
+.no-fact-container{
+    font-size: 22px;
+    padding: 2rem;
+    text-align: center;
+    color: aliceblue;
+}
+
+.button-container{
+    display: flex;
+    gap: 0.4rem;
+    padding: 0.4rem
+}
+
+.quiz-container{
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.fact-feedback {
+    margin-top: 20px;
+  }
+  
+  .fact-correct {
+    color: green;
+  }
+  
+  .fact-wrong {
+    color: red;
+  }
+  
+  .fact-green {
+    color: green;
+  }
+  
+  .fact-red {
+    color: red;
+  }
+  
+  .checkmark {
+    font-size: 1.5rem;
+    color: green;
+  }
+  
+  .crossmark {
+    font-size: 1.5rem;
+    color: red;
+  }
+  
+
+  .next-button-container{
+    margin-top: 1rem;
+  }
+
+.fact-container{
+    position: relative;
+    width: fit-content;
+}
+
+.checker-container{
+    position: absolute;
+}
+
+.facts-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+   
+}
+
+.fact-feedback{
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+}

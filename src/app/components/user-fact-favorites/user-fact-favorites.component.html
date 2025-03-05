@@ -1,0 +1,13 @@
+<div class="glass">
+
+  <div class="no-facts-container" *ngIf="(favorites$ | async)?.length === 0">
+    <h2>No favorite facts yet.</h2>
+  </div>
+
+  <div class="favorite-container">
+    <app-fact-card
+      *ngFor="let fact of favorites$ | async"
+      [fact]="fact"
+    ></app-fact-card>
+  </div>
+</div>

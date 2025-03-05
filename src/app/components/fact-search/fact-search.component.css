@@ -1,0 +1,76 @@
+.fact-search-container {
+  
+
+  
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem
+  }
+
+  .input-info-container{
+    display: flex;
+    flex-direction: column;
+   justify-content: center;
+  }
+  
+  .fact-type-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+    max-width: 250px;
+    width: 100%;
+  }
+  
+  .fact-type-item {
+    padding: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    text-align: center;
+    transition: 0.3s;
+    
+  }
+  
+  .fact-type-item:hover {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .selected {
+    background: rgba(0, 123, 255, 0.6);
+    color: white;
+    font-weight: bold;
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+   
+  }
+
+  .input-container >input {
+    padding: 0.4rem;
+    background: rgba(255, 255, 255, 0.6);
+  }
+
+  .component-container{
+
+    margin-top: 1rem;
+    display: flex;
+    justify-items: center;
+    padding: 16px;
+    flex-direction: column;
+  }
+
+  .fact-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .fact-container > h2 {
+    text-align: center;
+  }
+  

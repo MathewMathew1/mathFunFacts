@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+
+.mr-small{
+    margin-right: 0.5rem;
+}
+
+body {
+    background-image: url('assets/images/background.webp');
+    background-size: cover;  
+    background-position: center;  
+    background-attachment: fixed; 
+    margin: 0;
+    height: 100vh;
+  }
+
+  .glass{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 12px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+  

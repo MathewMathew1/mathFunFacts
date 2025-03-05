@@ -1,0 +1,11 @@
+<div class="fact-list-container glass">
+    <h2 class="list-title">Random {{ category | titlecase }} Facts</h2>
+  
+    <div class="fact-list" #factListContainer (scroll)="onScroll($event)">
+      <app-fact-card *ngFor="let fact of facts" [fact]="fact"></app-fact-card>
+      <div class="loading-container" *ngIf="isLoading">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+    </div>
+
+  </div>

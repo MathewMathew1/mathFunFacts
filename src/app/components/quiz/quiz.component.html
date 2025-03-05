@@ -1,0 +1,68 @@
+<div class="glass quiz-container">
+  <div *ngIf="isLoading" class="loading-spinner">
+    <p>Loading...</p>
+  </div>
+
+  <div *ngIf="!isLoading && currentFact">
+    <app-fact-card
+      *ngIf="isCorrectAnswer === null"
+      [fact]="currentFact"
+      [showButton]="false"
+    />
+    <div class="fact-feedback glass" *ngIf="isCorrectAnswer !== null">
+      <div *ngIf="wasFactModified; else wrongFeedback" class="facts-container">
+        <div class="fact-container">
+          <app-fact-card [fact]="currentFact" [showButton]="false" />
+          <div class="checker-container" style="right: 0; bottom: 0">
+            <span class="crossmark">&#x2716;</span>
+          </div>
+        </div>
+        <div class="fact-container">
+          <app-fact-card [fact]="currentTrueFact!" [showButton]="true" />
+
+          <div class="checker-container" style="right: 0; bottom: 0">
+            <span class="checkmark">&#x2714;</span>
+          </div>
+        </div>
+      </div>
+
+      <ng-template #wrongFeedback>
+        <div class="fact-container">
+          <app-fact-card [fact]="currentTrueFact!" [showButton]="true" />
+
+          <div class="checker-container" style="right: 0; bottom: 0">
+            <span class="checkmark">&#x2714;</span>
+          </div>
+        </div>
+      </ng-template>
+      <div >
+        <p>
+          Your answer that fact is
+          <span *ngIf="yourAnswer !== null">
+            {{ yourAnswer ? "true" : "false" }}
+          </span>
+          was
+          <span *ngIf="isCorrectAnswer === true" class="correct">
+            <span class="checkmark">✔️</span> Correct!
+          </span>
+          <span *ngIf="isCorrectAnswer === false" class="wrong">
+            <span class="cross">❌</span> Wrong!
+          </span>
+        </p>
+      </div>
+    </div>
+
+    <div *ngIf="isCorrectAnswer === null" class="button-container">
+      <app-button color="green" (click)="checkAnswer(true)">True</app-button>
+      <app-button color="red" (click)="checkAnswer(false)">False</app-button>
+    </div>
+
+    <div class="next-button-container" *ngIf="isCorrectAnswer !== null">
+      <app-button color="blue" (click)="nextFact()">Next Fact</app-button>
+    </div>
+  </div>
+
+  <div *ngIf="!currentFact" class="no-fact-container">
+    <p>No fact available. Please try again later.</p>
+  </div>
+</div>

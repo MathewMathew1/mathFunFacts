@@ -1,0 +1,6 @@
+<button 
+  [ngClass]="[sizeClasses, colorClass, className]" 
+  class="button-base" 
+  [attr.disabled]="disabled ? true : null">
+  <ng-content></ng-content>
+</button>

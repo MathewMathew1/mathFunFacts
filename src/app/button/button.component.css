@@ -1,0 +1,80 @@
+/* Base button styles */
+.button-base {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .button-base:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  /* Size variants */
+  .button-small {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.875rem;
+  }
+  
+  .button-large {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Color variants */
+  .button-black {
+    background-color: black;
+    color: white;
+  }
+  
+  .button-black:hover {
+    background-color: #333;
+  }
+  
+  .button-white {
+    background-color: white;
+    color: black;
+  }
+  
+  .button-white:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .button-red {
+    background-color: #f56565;
+    color: white;
+  }
+  
+  .button-red:hover {
+    background-color: #e53e3e;
+  }
+  
+  .button-green {
+    background-color: #48bb78;
+    color: white;
+  }
+  
+  .button-green:hover {
+    background-color: #38a169;
+  }
+  
+  .button-blue {
+    background: linear-gradient(to right, #38bdf8, #3b82f6);
+    color: white;
+  }
+  
+  .button-blue:hover {
+    background: linear-gradient(to right, #5eead4, #3b82f6);
+  }
+  
+  .button-default {
+    background-color: #cbd5e0;
+    color: black;
+  }
+  
+  .button-default:hover {
+    background-color: #e2e8f0;
+  }
+  
