@@ -7,21 +7,19 @@ import { FactType } from '../../types/Facts';
   providedIn: 'root'
 })
 export class FactService {
-  private baseUrl = 'http://numbersapi.com/';
+  private baseUrl = '/.netlify/functions/fetchFact';
 
-  constructor(private https: HttpClient) {}
+  constructor(private http: HttpClient) {}
 
   getRandomFact(type: string): Observable<any> {
-    return this.https.get(`${this.baseUrl}random/${type}?json`);
+    return this.http.get(`${this.baseUrl}?type=${type}`);
   }
 
   getFactByNumber(number: string, type: FactType): Observable<any> {
-    const fact = this.https.get(`${this.baseUrl}${number}/${type}?json`)
-    console.log(fact)
-    return fact;
+    return this.http.get(`${this.baseUrl}?number=${number}&type=${type}`);
   }
 
-  getMultipleFacts(apiUrl: string, type: string): Observable<any> {
-    return this.https.get(apiUrl); 
+  getMultipleFacts(number: string, type: string): Observable<any> {
+    return this.http.get(`${this.baseUrl}?number=${number}&type=${type}`); 
   }
 }
