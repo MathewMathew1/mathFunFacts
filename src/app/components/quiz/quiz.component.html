@@ -1,6 +1,6 @@
 <div class="glass quiz-container">
   <div *ngIf="isLoading" class="loading-spinner">
-    <p>Loading...</p>
+    <app-loading-spinner />
   </div>
 
   <div *ngIf="!isLoading && currentFact">
@@ -62,7 +62,7 @@
     </div>
   </div>
 
-  <div *ngIf="!currentFact" class="no-fact-container">
+  <div *ngIf="!isLoading && !currentFact" class="no-fact-container">
     <p>No fact available. Please try again later.</p>
   </div>
 </div>

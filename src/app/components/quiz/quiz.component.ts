@@ -5,10 +5,11 @@ import { FavoritesService } from '../../services/fact-favorites.service';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from '../../button/button.component';
 import { FactCardComponent } from '../fact-card/fact-card.component';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-quiz',
-  imports: [ButtonComponent, CommonModule, FactCardComponent],
+  imports: [ButtonComponent, CommonModule, FactCardComponent, LoadingSpinnerComponent],
   templateUrl: './quiz.component.html',
   styleUrls: ['./quiz.component.css'],
 })

@@ -8,7 +8,8 @@
 .button-container{
     display: flex;
     gap: 0.4rem;
-    padding: 0.4rem
+    padding: 0.4rem;
+    justify-content: right;
 }
 
 .quiz-container{
