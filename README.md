@@ -1,59 +1,25 @@
-# FunFactGenerator
+Fun Fact Generator 🎲
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+Overview
 
-## Development server
+The Fun Fact Generator is a web application built with Angular that fetches and displays interesting facts based on numbers, dates, years, and mathematical values. Users can generate random facts, input specific numbers, scroll through an infinite list of facts dynamically fetched from the NumbersAPI, or guess if the "fact" is true or not.
 
-To start a local development server, run:
+Features
 
-```bash
-ng serve
-```
+🔢 Fact Generator by Type: Fetch trivia, math, date, or year facts.
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+🎲 Random Fact Generator: Get a random fact based on a selected category.
 
-## Code scaffolding
+🔍 Search for Specific Numbers, Dates, or Years: Enter a number, date (MM/DD), or year to get a related fact.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+🔄 Infinite Scrolling Fact List: Scroll horizontally to automatically load more facts.
 
-```bash
-ng generate component component-name
-```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Tech Stack
 
-```bash
-ng generate --help
-```
+Framework: Angular (Standalone Components)
 
-## Building
+UI Components: Custom Angular components
 
-To build the project run:
+API: NumbersAPI
 
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
