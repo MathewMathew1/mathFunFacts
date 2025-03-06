@@ -23,6 +23,15 @@ app-button {
   font-size: 25px;
 }
 
+@media screen and (max-width: 650px) {
+  .fact-list-container {
+    padding: 0;
+   
+  }
+
+
+}
+
 .fact-list-container::-webkit-scrollbar {
   width: 8px;
 }
