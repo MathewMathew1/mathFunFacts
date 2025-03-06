@@ -2,11 +2,11 @@
     <h3>{{ fact.type | titlecase }} Fact</h3>
     <div class="card-text">  <p>{{ fact.text }}</p> </div>
     <div>
-    <app-button color="green" *ngIf="!fact.isInFavorite && showButton" (click)="addToFavorites()">
+    <app-button color="green" [style]="{ 'font-size': '13px', 'padding': '10px', 'width': '100%' }" className="button-class" *ngIf="!fact.isInFavorite && showButton" (click)="addToFavorites()">
       Add to Favorites
     </app-button>
     
-    <app-button color="red" *ngIf="fact.isInFavorite && showButton" (click)="removeFromFavorites()">
+    <app-button color="red" [style]="{ 'font-size': '13px', 'padding': '10px', 'width': '100%' }" className="button-class" *ngIf="fact.isInFavorite && showButton" (click)="removeFromFavorites()">
       Remove from Favorites
     </app-button>
   </div>

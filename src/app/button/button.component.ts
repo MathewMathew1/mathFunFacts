@@ -1,5 +1,5 @@
 
-import { Component, Input, HostBinding } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Import CommonModule
 
 type ButtonColor = 'black' | 'white' | 'red' | 'green' | 'blue' | 'default';
@@ -15,6 +15,7 @@ export class ButtonComponent {
   @Input() color: ButtonColor = 'default';
   @Input() className: string = '';
   @Input() disabled: boolean = false;
+  @Input() style: {[klass: string]: any} = {};
 
   // This computes the correct button size based on the "small" input
   get sizeClasses() {

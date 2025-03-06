@@ -1,7 +1,8 @@
 .fact-search-container {
   
 
-  
+  color: #ffffff; /* Bright white text */
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
     display: flex;
     justify-content: center;
     gap: 0.4rem
